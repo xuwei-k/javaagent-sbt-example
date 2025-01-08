@@ -11,4 +11,5 @@ jobs:
       with:
         java-version: 21
         distribution: adopt
+    - uses: sbt/setup-sbt@v1
     - run: sbt -v scalafmtCheckAll scalafmtSbtCheck test
