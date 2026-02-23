@@ -5,7 +5,8 @@ lazy val core = project
     Test / fork := true,
     Test / javaOptions += {
       val arg = "java-agent-arg"
-      val agentJar = (agent / Compile / packageBin).value.getCanonicalPath
+      val converter = fileConverter.value
+      val agentJar = converter.toPath((agent / Compile / packageBin).value).toFile.getCanonicalPath
       s"-javaagent:${agentJar}=${arg}"
     }
   )
