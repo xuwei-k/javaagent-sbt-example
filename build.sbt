@@ -1,7 +1,7 @@
 lazy val core = project
   .settings(
     scalaVersion := "3.8.2",
-    libraryDependencies += "org.scalatest" %% "scalatest-freespec" % "3.2.19" % Test,
+    libraryDependencies += "org.scalatest" %% "scalatest-freespec" % "3.2.20" % Test,
     Test / fork := true,
     Test / javaOptions += {
       val arg = "java-agent-arg"
