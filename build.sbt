@@ -1,6 +1,6 @@
 lazy val core = project
   .settings(
-    scalaVersion := "3.8.3",
+    scalaVersion := "3.8.4",
     libraryDependencies += "org.scalatest" %% "scalatest-freespec" % "3.2.20" % Test,
     Test / fork := true,
     Test / javaOptions += {
